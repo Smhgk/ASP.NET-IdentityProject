@@ -1,0 +1,23 @@
+﻿@model EmailMFA
+
+<br />
+<h2>Güvenlik Kodu</h2>
+<br />
+<form asp-action="LoginTwoFactor" asp-controller="Identity" method="post">
+    <div class="text-danger" asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="SecurityCode" class="form-label">Email</label>
+        <input asp-for="SecurityCode" class="form-control" placeholder="Güvenlik Kodunu Girin.." />
+        <span asp-validation-for="SecurityCode" class="text-danger"></span>
+    </div>
+    <br />
+    <div>
+        <input type="checkbox" asp-for="RememberMe" class="form-check-input" />
+        <label asp-for="RememberMe" class="form-check-label">Beni Hatırla</label>
+        <span asp-validation-for="RememberMe" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Gönder</button>
+</form>
+
+

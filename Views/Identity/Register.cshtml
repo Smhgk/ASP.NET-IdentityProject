@@ -1,0 +1,23 @@
+﻿@model RegisterViewModel
+
+<br />
+<h2>Kayıt Ol</h2>
+<br />
+<form asp-action="Register" asp-controller="Identity" method="post">
+    <div class="text-danger" asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" placeholder="Email Giriniz.." />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <br />
+    <div>
+        <label asp-for="Password" class="form-label">Şifre</label>
+        <input asp-for="Password" class="form-control" placeholder="Şifre Giriniz.." />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
+
+
